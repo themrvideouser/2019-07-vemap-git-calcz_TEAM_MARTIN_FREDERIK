@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
     <style>
         main{tex-align: center; margin-top: 45vh;}
+				input[type="submit"]{display: none;}
     </style>
 </head>
 <body>
@@ -51,16 +52,16 @@ if(isset($_POST["zahl1"]))
 				break;
 		case "multiplizieren": $ergebnis=$zahl1*$zahl2;
 				break;
-		case "dividieren": 
+		case "dividieren":
 				if($zahl2==0)
 				{
 					$ergebnis="Keine Divisionen durch null!";
 				}
 				else
 				{
-					$ergebnis=$zahl1/$zahl2;	
+					$ergebnis=$zahl1/$zahl2;
 				}
-				
+
 				break;
 		default: $ergebnis="keine gültige Rechenart";
 	}
