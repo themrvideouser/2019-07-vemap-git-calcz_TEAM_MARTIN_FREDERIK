@@ -4,10 +4,11 @@
 	<title>Schulung</title>
 	<meta charset="UTF-8">
     <style>
-        
+        main{tex-align: center; margin-top: 45vh;}
     </style>
 </head>
 <body>
+<main>
 <form action="<?php  echo $_SERVER["PHP_SELF"];   ?>" method="post">
 
 	Zahl1<br>
@@ -27,7 +28,7 @@
 	<input type="submit" value="Absenden"><br>
 
 </form>
-
+</main>
 <?php
 if(isset($_POST["zahl1"]))
 {
