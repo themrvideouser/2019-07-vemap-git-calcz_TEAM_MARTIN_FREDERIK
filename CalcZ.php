@@ -31,8 +31,7 @@
 </form>
 </main>
 <?php
-if(isset($_POST["zahl1"]))
-{
+if(isset($_POST["zahl1"])) {
 	$zahl1=(float)$_POST["zahl1"];
 	$zahl2=(float)$_POST["zahl2"];
 	$rechenart=$_POST["rechenart"];
@@ -44,8 +43,7 @@ if(isset($_POST["zahl1"]))
 	echo $rechenart;
 	echo "<br>\n";
 
-	switch($rechenart)
-	{
+	switch($rechenart) {
 		case "addieren": $ergebnis=$zahl1+$zahl2;
 				break;
 		case "subtrahieren": $ergebnis=$zahl1-$zahl2;
@@ -53,23 +51,18 @@ if(isset($_POST["zahl1"]))
 		case "multiplizieren": $ergebnis=$zahl1*$zahl2;
 				break;
 		case "dividieren":
-				if($zahl2==0)
-				{
+				if($zahl2==0) {
 					$ergebnis="Keine Divisionen durch null!";
 				}
-				else
-				{
+				else {
 					$ergebnis=$zahl1/$zahl2;
 				}
 
 				break;
 		default: $ergebnis="keine gültige Rechenart";
 	}
-
 	echo "ERGEBNIS:" . $ergebnis;
-
 }
 ?>
-
 </body>
 </html>
